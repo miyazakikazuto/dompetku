@@ -1,1 +1,30 @@
+name: Build Check
 
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+      env:
+        # Kita tambahkan dummy key agar build tidak gagal saat pengecekan CI
+        VITE_GEMINI_API_KEY: "dummy_key"
+        GEMINI_API_KEY: "dummy_key"
