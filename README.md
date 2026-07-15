@@ -1,20 +1,24 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Dompetku
 
-# Run and deploy your AI Studio app
+Aplikasi dompet digital berbasis web yang dibangun dengan TypeScript dan Firebase.
 
-This contains everything you need to run your app locally.
+## Fitur
 
-View your app in AI Studio: https://ai.studio/apps/b5501bec-247a-4c19-a60b-6b0a81683a6f
+- Manajemen dompet/transaksi
+- Firebase Firestore untuk penyimpanan data
+- Firebase App Check untuk keamanan
+- Autentikasi pengguna
 
-## Run Locally
+## Teknologi
 
-**Prerequisites:**  Node.js
+- TypeScript
+- Vite
+- Firebase (Firestore, App Check, Authentication)
+- HTML + CSS
 
+## Cara Pakai
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Clone repositori
+2. \`npm install\`
+3. Salin \`.env.example\` ke \`.env\` dan isi konfigurasi Firebase
+4. \`npm run dev\` untuk development
